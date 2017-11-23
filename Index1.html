@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Learnlayout.com</title>
+    <style media="screen">
+      #main {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      .simple {
+        width: 500px;
+          margin: 20px auto;
+          -webkit-box-sizing: border-box;
+             -moz-box-sizing: border-box;
+                  box-sizing: border-box;
+      }
+      .fancy {
+        width: 500px;
+        margin: 20px auto;
+        padding: 50px;
+        border: solid blue 10px;
+        -webkit-box-sizing: border-box;
+           -moz-box-sizing: border-box;
+                box-sizing: border-box;
+       }
+      .static {
+        position: static;
+      }
+      .relative1 {
+        position: relative;
+      }
+      .relative2 {
+        position: relative;
+        top: -20px;
+        left: 20px;
+        background-color: white;
+        width: 500px;
+      }
+      .fixed {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 200px;
+        background-color: white;
+      }
+      .relative {
+        position: relative;
+        width: 600px;
+        height: 400px;
+      }
+      .absolute {
+        position: absolute;
+        top: 120px;
+        right: 0;
+        width: 300px;
+        height: 200px;
+      }
+      .container {
+      position: relative;
+      }
+      nav {
+        position: absolute;
+        left: 0px;
+        width: 200px;
+      }
+      section {
+  /* position is static by default */
+      margin-left: 200px;
+      }
+      footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        height: 70px;
+        background-color: white;
+        width: 100%;
+}
+      body {
+        margin-bottom: 120px;
+}
+    </style>
+
+  </head>
+  <body>
+
+    <div class="block">
+      <p>div is the standard block-level element. A block-level element starts on a new line and stretches out to the left and right as far as it can. Other common block-level elements are <em>p</em> and <em>form</em>, and new in HTML5 are <em>header</em>, <em>footer</em>, <em>section</em>, and more.</p>
+    </div>
+
+    <div id="main">
+      Setting the width of a block-level element will prevent it from stretching out to the edges of its container to the left and right. Then, you can set the left and right margins to auto to horizontally center that element within its container. The element will take up the width you specify, then the remaining space will be split evenly between the two margins.<br>The only problem occurs when the browser window is narrower than the width of your element. The browser resolves this by creating a horizontal scrollbar on the page. Let's improve the situation...<br>Using <em>max-width</em> instead of <em>width</em> in this situation will improve the browser's handling of small windows. This is important when making a site usable on mobile. Resize this page to check it out!<br>By the way, max-width is supported by all major browsers including IE7+ so you shouldn't be afraid of using it
+    </div>
+
+    <div class="simple">
+      <p>We're the same size now!</p>
+    </div>
+
+    <div class="fancy">
+      <p>Hooray!</p>
+    </div>
+
+    <div class="static">
+      <p><em>static</em> is the default value. An element <em>with position: static;</em> is not positioned in any special way. A static element is said to be not positioned and an element with its position set to anything else is said to be positioned.</p>
+    </div>
+
+    <div class="relative1">
+      <p>relative behaves the same as static unless you add some extra properties.</p>
+    </div>
+
+    <div class="relative2">
+      <p>Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position. Other content will not be adjusted to fit into any gap left by the element.</p>
+    </div>
+
+    <div class="relative">
+      <p>This element is relatively-positioned. If this element was position: static; its absolutely-positioned child would escape and would be positioned relative to the document body.</p>
+    </div>
+
+    <div class="absolute">
+      <p>This element is absolutely-positioned. It's positioned relative to its parent.</p>
+    </div>
+
+    <div class="fixed">
+      <p>Hello! Don't pay attention to me yet.</p>
+    </div>
+
+    <div class="container">
+      <nav>
+        <ul>
+          <li>Home</li>
+          <li>Taco Menu</li>
+          <li>Draft List</li>
+          <li>Hours</li>
+          <li>Directions</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+
+      <section>
+        <p>The margin-left style for sections makes sure there is room for the nav. Otherwise the absolute and static elements would overlap</p>
+      </section>
+
+      <section>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </section>
+
+      <footer>If you use a fixed header or footer, make sure there is room for it! I put a margin-bottom on the body.</footer>
+
+    </div>
+
+  </body>
+</html>
